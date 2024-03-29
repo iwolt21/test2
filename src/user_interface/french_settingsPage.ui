@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1183</width>
+    <height>877</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialogue</string>
+  </property>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>-10</x>
+     <y>0</y>
+     <width>1200</width>
+     <height>900</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(220, 220, 220);</string>
+   </property>
+   <widget class="QWidget" name="widget_2" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1200</width>
+      <height>90</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(0, 85, 127);</string>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>540</x>
+       <y>20</y>
+       <width>141</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 75 36pt &quot;Arial&quot;;
+color: rgb(255, 255, 255);
+</string>
+     </property>
+     <property name="text">
+      <string>ePAT</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="backButton">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>110</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+            QPushButton {
+                font: 75 16pt &quot;Arial&quot;;
+                background-color: rgb(0, 85, 127);
+                border-radius: 10px;
+                color: rgb(255, 255, 255);
+            }
+
+            QPushButton:hover {
+                background-color: rgb(0, 75, 117); /* Slightly darker color when hovered */
+            }
+
+            QPushButton:pressed {
+                background-color: rgb(0, 65, 107); /* Even darker color when clicked */
+            }
+        </string>
+    </property>
+    <property name="text">
+     <string>Retour</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="uploadButton">
+    <property name="geometry">
+     <rect>
+      <x>1049</x>
+      <y>120</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+            QPushButton {
+                font: 75 16pt &quot;Arial&quot;;
+                background-color: rgb(0, 85, 127);
+                border-radius: 10px;
+                color: rgb(255, 255, 255);
+            }
+
+            QPushButton:hover {
+                background-color: rgb(0, 75, 117); /* Slightly darker color when hovered */
+            }
+
+            QPushButton:pressed {
+                background-color: rgb(0, 65, 107); /* Even darker color when clicked */
+            }
+        </string>
+    </property>
+    <property name="text">
+     <string>Charger</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="updateCRKN">
+    <property name="geometry">
+     <rect>
+      <x>825</x>
+      <y>120</y>
+      <width>200</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+            QPushButton {
+                font: 75 16pt &quot;Arial&quot;;
+                background-color: rgb(0, 85, 127);
+                border-radius: 10px;
+                color: rgb(255, 255, 255);
+            }
+
+            QPushButton:hover {
+                background-color: rgb(0, 75, 117); /* Slightly darker color when hovered */
+            }
+
+            QPushButton:pressed {
+                background-color: rgb(0, 65, 107); /* Even darker color when clicked */
+            }
+            QPushButton:disabled {
+                background-color: rgb(180, 180, 180); /* Grey color for disabled state */
+                color: rgb(120, 120, 120); /* Darker text color for disabled state */
+            }
+        </string>
+    </property>
+    <property name="text">
+     <string>Mise à jour RCDR</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="UniversityLabel_5">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>190</y>
+      <width>240</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 14pt &quot;Arial&quot;;
+color: rgb(0, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string>Sélectionnez l'établissement</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="institutionSelection">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>230</y>
+      <width>611</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">/* Styling for the QComboBox */
+QComboBox {
+    font: 75 16pt &quot;Arial&quot;;
+    background-color: rgb(0, 85, 127);
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+}
+
+/* Styling for the QComboBox when hovered */
+QComboBox:hover {
+    background-color: rgb(0, 75, 117); /* Slightly darker color when hovered */
+}
+
+/* Styling for the QComboBox when the dropdown is activated */
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: right center;
+    width: 15px;
+    border-left-width: 0px;
+    border-left-color: darkgray;
+    border-left-style: solid; /* just a single line */
+    border-top-right-radius: 10px; /* same radius as the QComboBox */
+    border-bottom-right-radius: 10px; /* same radius as the QComboBox */
+}
+
+/* Styling for the QComboBox when the dropdown button is pressed */
+QComboBox::down-arrow {
+                image: url(resources/dropdown_icon.png);
+                width: 21px;
+                height: 15px;
+                padding-right: 15px;
+            }</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="UniversityLabel_6">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>410</y>
+      <width>251</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 14pt &quot;Arial&quot;;
+color: rgb(0, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string>Lnlien d'aide</string>
+    </property>
+   </widget>
+
+   <widget class="QLabel" name="UniversityLabel_7">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>300</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 14pt &quot;Arial&quot;;
+color: rgb(0, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string>Choisir la langue:</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="languageSetting">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>350</y>
+      <width>611</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">/* Styling for the QComboBox */
+QComboBox {
+    font: 75 16pt &quot;Arial&quot;;
+    background-color: rgb(0, 85, 127);
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+}
+
+/* Styling for the QComboBox when hovered */
+QComboBox:hover {
+    background-color: rgb(0, 75, 117); /* Slightly darker color when hovered */
+}
+
+/* Styling for the QComboBox when the dropdown is activated */
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: right center;
+    width: 15px;
+    border-left-width: 0px;
+    border-left-color: darkgray;
+    border-left-style: solid; /* just a single line */
+    border-top-right-radius: 10px; /* same radius as the QComboBox */
+    border-bottom-right-radius: 10px; /* same radius as the QComboBox */
+}
+
+/* Styling for the QComboBox when the dropdown button is pressed */
+QComboBox::down-arrow {
+                image: url(resources/dropdown_icon.png);
+                width: 21px;
+                height: 15px;
+                padding-right: 15px;
+            }</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>Anglais</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Français</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="UniversityLabel_8">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>420</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 14pt &quot;Arial&quot;;
+color: rgb(0, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string>URL du CRKN</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="helpURL">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>560</y>
+      <width>581</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">/* Styling for QLineEdit */
+QLineEdit {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333; /* Text color */
+    background-color: #fff; /* Background color */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 5px; /* Border radius */
+    padding: 8px; /* Padding inside the QLineEdit */
+}
+
+/* Styling for QLineEdit when it's focused */
+QLineEdit:focus {
+    border: 1px solid #4d90fe; /* Focused border color */
+    outline: none; /* Remove default focus outline */
+}
+
+/* Styling for QLineEdit when hovered */
+QLineEdit:hover {
+    border: 1px solid #999; /* Border color on hover */
+}</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="helpURL">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>520</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 14pt &quot;Arial&quot;;
+color: rgb(0, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string>URL d'aide</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="saveSettings">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>730</y>
+      <width>301</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+            QPushButton {
+                font: 75 16pt &quot;Arial&quot;;
+                background-color: rgb(0, 85, 127);
+                border-radius: 10px;
+                color: rgb(255, 255, 255);
+            }
+
+            QPushButton:hover {
+                background-color: rgb(0, 75, 117); /* Slightly darker color when hovered */
+            }
+
+            QPushButton:pressed {
+                background-color: rgb(0, 65, 107); /* Even darker color when clicked */
+            }
+            QPushButton:disabled {
+                background-color: rgb(180, 180, 180); /* Grey color for disabled state */
+                color: rgb(120, 120, 120); /* Darker text color for disabled state */
+            }
+        </string>
+    </property>
+    <property name="text">
+     <string>Enregistrer les paramètres</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="helpButton">
+    <property name="geometry">
+     <rect>
+      <x>1050</x>
+      <y>730</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+            QPushButton {
+                font: 75 16pt &quot;Arial&quot;;
+                background-color: rgb(0, 85, 127);
+                border-radius: 10px;
+                color: rgb(255, 255, 255);
+            }
+
+            QPushButton:hover {
+                background-color: rgb(0, 75, 117); /* Slightly darker color when hovered */
+            }
+
+            QPushButton:pressed {
+                background-color: rgb(0, 65, 107); /* Even darker color when clicked */
+            }
+        </string>
+    </property>
+    <property name="text">
+     <string>Aide</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="crknURL">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>460</y>
+      <width>581</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">/* Styling for QLineEdit */
+QLineEdit {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333; /* Text color */
+    background-color: #fff; /* Background color */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 5px; /* Border radius */
+    padding: 8px; /* Padding inside the QLineEdit */
+}
+
+/* Styling for QLineEdit when it's focused */
+QLineEdit:focus {
+    border: 1px solid #4d90fe; /* Focused border color */
+    outline: none; /* Remove default focus outline */
+}
+
+/* Styling for QLineEdit when hovered */
+QLineEdit:hover {
+    border: 1px solid #999; /* Border color on hover */
+}
+QLineEdit:disabled {
+                background-color: rgb(180, 180, 180); /* Grey color for disabled state */
+                color: rgb(120, 120, 120); /* Darker text color for disabled state */
+            }
+</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="manageDatabase">
+    <property name="geometry">
+     <rect>
+      <x>625</x>
+      <y>640</y>
+      <width>330</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+            QPushButton {
+                font: 75 16pt &quot;Arial&quot;;
+                background-color: rgb(0, 85, 127);
+                border-radius: 10px;
+                color: rgb(255, 255, 255);
+            }
+
+            QPushButton:hover {
+                background-color: rgb(0, 75, 117); /* Slightly darker color when hovered */
+            }
+
+            QPushButton:pressed {
+                background-color: rgb(0, 65, 107); /* Even darker color when clicked */
+            }
+            QPushButton:disabled {
+                background-color: rgb(180, 180, 180); /* Grey color for disabled state */
+                color: rgb(120, 120, 120); /* Darker text color for disabled state */
+            }
+        </string>
+    </property>
+    <property name="text">
+     <string>Gérer la base de données locale</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="manageInstitution">
+    <property name="geometry">
+     <rect>
+      <x>285</x>
+      <y>640</y>
+      <width>330</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+            QPushButton {
+                font: 75 16pt &quot;Arial&quot;;
+                background-color: rgb(0, 85, 127);
+                border-radius: 10px;
+                color: rgb(255, 255, 255);
+            }
+
+            QPushButton:hover {
+                background-color: rgb(0, 75, 117); /* Slightly darker color when hovered */
+            }
+
+            QPushButton:pressed {
+                background-color: rgb(0, 65, 107); /* Even darker color when clicked */
+            }
+            QPushButton:disabled {
+                background-color: rgb(180, 180, 180); /* Grey color for disabled state */
+                color: rgb(120, 120, 120); /* Darker text color for disabled state */
+            }
+        </string>
+    </property>
+    <property name="text">
+     <string>Gérer les institutions locales</string>
+    </property>
+   </widget>
+
+   <widget class="QTextEdit" name="helpLink">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>460</y>
+      <width>581</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">/* Styling for QTextEdit */
+QTextEdit {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333; /* Text color */
+    background-color: #fff; /* Background color */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 5px; /* Border radius */
+    padding: 8px; /* Padding inside the QTextEdit */
+}
+
+/* Styling for QTextEdit when it's focused */
+QTextEdit:focus {
+    border: 1px solid #4d90fe; /* Focused border color */
+    outline: none; /* Remove default focus outline */
+}
+
+/* Styling for QTextEdit when hovered */
+QTextEdit:hover {
+    border: 1px solid #999; /* Border color on hover */
+}</string>
+    </property>
+   </widget>
+
+   <widget class="QCheckBox" name="allowCRKNData">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>128</y>
+      <width>200</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 14pt &quot;Arial&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Autoriser les données du CRKN</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
